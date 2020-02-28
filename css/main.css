@@ -3,11 +3,10 @@
     padding: 0;
     margin: 0;
 }
-@media screen and ( min-width: 400px ) {
     body {
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh;
+        grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
         grid-template-areas:
         "title login"
         "navigation navigation"
@@ -21,26 +20,26 @@
     .title { grid-area: title; }
     .login { grid-area: login; }
     .navigation { grid-area: navigation; }
-    .sidebar { grid-area: welcome; }
-    .welcome { grid-area: sidebar; }
+    .sidebar { grid-area: sidebar; }
+    .welcome { grid-area: welcome; }
     .events { grid-area: events; }
     .promotions { grid-area: promotions; }
-    .con { grid-area: con; }
+    .conten { grid-area: conten; }
     .footer { grid-area: footer; }
-}
 
 .title, .events, .footer { background: lightsalmon; }
 .login { background: red; }
 .navigation, .conten, .promotions { background: lightsteelblue; }
 .welcome, .footer { background: lightyellow; }
 .sidebar {background: cyan; }
+.conten { background: lightgreen; }
 
 /* tablet */
 @media screen and ( min-width: 500px ){
 
     body {
         grid-template-columns: 50% 50%;
-        grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh 30vh;
+        grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
         grid-template-areas:
         "title login"
         "navigation navigation"
@@ -57,7 +56,7 @@
     .sidebar { grid-area: sidebar; }
     .events { grid-area: events; }
     .promotions { grid-area: promotions; }
-    .con { grid-area: con; }
+    .conten { grid-area: conten; }
     .footer { grid-area: footer; }
 
 }
@@ -68,7 +67,7 @@
             12.5%
             37.5%
             25%;
-        grid-template-rows: 35vh 35vh 35vh 35vh 35vh ;
+        grid-template-rows: 10vh 10vh 10vh 10vh 10vh ;
         grid-template-areas:
         "title navigation navigation login"
         "welcome welcome welcome welcome"
