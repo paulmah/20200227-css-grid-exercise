@@ -1,38 +1,39 @@
-{
+* {
     font-size: 16px;
     padding: 0;
     margin: 0;
 }
-body {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh;
-    grid-template-areas:
-    "title login"
-    "navigation navigation"
-    "sidebar sidebar"
-    "welcome welcome"
-    "events events"
-    "promotions promotions"
-    "conten conten"
-    "footer footer";
-}
+@media screen and ( min-width: 400px ) {
+    body {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh 30vh 30vh;
+        grid-template-areas:
+        "title login"
+        "navigation navigation"
+        "sidebar sidebar"
+        "welcome welcome"
+        "events events"
+        "promotions promotions"
+        "conten conten"
+        "footer footer";
+    }
     .title { grid-area: title; }
     .login { grid-area: login; }
     .navigation { grid-area: navigation; }
-    .welcome { grid-area: sidebar; }
     .sidebar { grid-area: welcome; }
+    .welcome { grid-area: sidebar; }
     .events { grid-area: events; }
     .promotions { grid-area: promotions; }
     .con { grid-area: con; }
     .footer { grid-area: footer; }
+}
 
-
-.title, .events, .footer { background: lightsalmon;}
-.login, .sidebar {background: lightseagreen}
-.navigation, .conten {background: lightsteelblue}
-.welcome, .footer {background: lightyellow}
-/* .other-links {background: lightgreen} */
+.title, .events, .footer { background: lightsalmon; }
+.login { background: red; }
+.navigation, .conten, .promotions { background: lightsteelblue; }
+.welcome, .footer { background: lightyellow; }
+.sidebar {background: cyan; }
 
 /* tablet */
 @media screen and ( min-width: 500px ){
@@ -67,10 +68,13 @@ body {
             12.5%
             37.5%
             25%;
-        grid-template-rows: 35w 35w 35w;
+        grid-template-rows: 35vh 35vh 35vh 35vh 35vh ;
         grid-template-areas:
-            "hero hero hero hero"
-            "first-service second-service second-service third-service"
-            "other-links other-links copyright-info copyright-info";
+        "title navigation navigation login"
+        "welcome welcome welcome welcome"
+        "events events promotions sidebar"
+        "conten conten conten sidebar"
+        "footer footer footer sidebar"    
     }
+}
 
